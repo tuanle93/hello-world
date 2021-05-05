@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
-    @RequestMapping(path = "/{number}")
+    @RequestMapping(path = "/hello-world/{number}")
     public String sum(@PathVariable("number") String number) throws JSONException {
         JSONObject jo = new JSONObject();
         jo.put("sum", Integer.parseInt(number) + 10);
