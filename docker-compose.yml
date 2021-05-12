@@ -1,0 +1,15 @@
+version: "1.0"
+services:
+  web:
+    build: .
+    ports:
+      - "80:8080"
+    volumes:
+      - .:/code
+      - logvolume01:/var/log
+    links:
+      - redis
+  redis:
+    image: tuanle93/test-dockerhub:ver2
+volumes:
+  logvolume01: {}
